@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D'rock Resort</title>
+    <link rel="icon" href="image/favicon.ico" />
+    <link rel="stylesheet" href="./style_hidden.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="js/lightbox.min.css">
+<script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+</head>
+<body>
+  <style>
+    /* .uparrow{
+      text-align: right;
+      padding: 45px;
+    } */
+      #fromthetop{
+      position: fixed;
+      color: #000;
+      background: #0F6292;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      text-align: center;
+      border: 1px solid #fff;
+      /* justify-content: center; */
+      cursor: pointer;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      }
+</style>
+    <section class="Bars">
+    <div class="menu-bar">
+        <div class="logo">
+          <a href="index.php"><img src="image/drock.png" alt="" width="100px" height="50px"></a></div>
+          <ul>
+          <li><b><a href="index.php">HOME</a></b></li>
+            <li><b><a href="contact-us.php">CONTACT</a></b></li>
+            <li><b><a href="about.php">ABOUT</a></b></li>
+            <li><b><a href="FAQ.php">FAQ</a></b></li>
+          </ul>
+        </div>
+  <div class="about-section">
+    <div class="container">
+    <h1>Relaxation and Adventure <br> Beyond Metro</b></h1>
+  </div>
+  </div>
+
+    <div class="pool-cottage-room">
+      <h1>Pool and Cottages</h1>
+      <div class="item-public">
+        <div class="item-rows-public">
+        <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="image/bakground/copy1.jpg"></div>
+        <div class="swiper-slide"><img src="image/bakground/pool9.jpg"></div>
+        <div class="swiper-slide"><img src="image/bakground/pool10.jpg"></div>
+        <div class="swiper-slide"><img src="image/bakground/pool4.jpg"></div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+      <div>
+        <div class="public-info">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p> 
+            <table class="table">
+                <thead>
+                  <tr>
+                  <th colspan="2">Operating Hours</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                  <td><b>Day Swimming</b></td>
+                  <td><b>Night Swimming</b></td>
+                  </tr>
+                  <tr>
+                  <td>8:00am - 5:00pm</td>
+                  <td>7:00pm - 5:00am</td>
+                  </tr>
+                  <tr>
+                  <td>Adult Per Head <span>&#8369;</span>100.00</td>
+                  <td>Adult Per Head <span>&#8369;</span>150.00</td>
+                  </tr>
+                  <tr>
+                  <td>Kids Per Head (Below 4ft.) <span>&#8369;</span>50.00</td>
+                  <td>Kids Per Head (Below 4ft.) <span>&#8369;</span>100.00</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+               <a class="btn btn-primary" data-toggle="collapse" href="check-cottage.php" role="button">Reserve Now! </a>
+            </div>
+            
+</div>
+</div>
+<div class="uparrow">
+  <button id="fromthetop">
+  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+  </button>
+</div>
+<div class="drock-pool">
+          <div class="drock-img-resort"><img src="image/bakground/cot.jpg" alt="event" width="240px" height="200">
+          <p>Nipa Rock, 8-10 Person<br><span>&#8369;</span>400,00<br>Day or Night</p>
+          </div>
+          <div class="drock-img-resort"><img src="image/bakground/cot1.jpg" alt="event" width="240px" height="200">
+          <p>Pavillion, 10-15 Person<br><span>&#8369;</span>500,00<br>Day or Night</p>
+          </div>
+          <div class="drock-img-resort"><img src="image/bakground/cot1.jpg" alt="event" width="240px" height="200">
+          <p>Nipa Rock, 15-20 Person<br><span>&#8369;</span>800,00 <br>Day or Night</p>
+          </div>
+</div>
+<div class="item-public">
+  <h1>Affordable Room</h1>
+            <div class="item-rows-public">
+            <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="image/bakground/room.jpg"></div>
+        <div class="swiper-slide"><img src="image/bakground/room1.jpg"></div>
+        <div class="swiper-slide"><img src="image/bakground/room2.jpg"></div>
+        <div class="swiper-slide"><img src="image/bakground/room3.jpg"></div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+          <div>
+            <div class="public-info">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p> 
+                    <table class="table">
+                <thead>
+                  <tr>
+                  <th><b>Amenties</b></th>
+                    <th><b>Units</b></th>
+                    <th><b>Capacity</b></th>
+                    <th><b>Rate</b></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1 Bed <br>+ Comfort Room</td>
+                    <td>5 Units</td>
+                    <td>2 Person</td>
+                    <td><span>&#8369;</span>2,000<br>Day or Night</td>
+                  </tr>
+                  <tr>
+                  <td>2 Beds <br>+ Comfort Room</br></td>
+                    <td>5 Units</td>
+                    <td>4 Person</td>
+                    <td><span>&#8369;</span>3,000<br>Day or Night</br</td>
+                  </tr>
+                  <tr>
+                    <td>2 Bed w/o <br>+ Comfort Room</br></td>
+                    <td>5 Units</td>
+                    <td>4 Person</td>
+                    <td><span>&#8369;</span>2,500<br>Day or Night</br</td>
+                </tr>
+                </tbody>
+              </table>
+              <a class="btn btn-primary" data-toggle="collapse" href="check-room.php" role="button">Reserve Now!</a>
+            </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="private-public-pool">
+      <h1>Exclusive</h1>
+      <div class="item-private">
+        <div class="item-rows">
+      <img src="image/bakground/privatepool.jpg" alt="" srcset=""><div>
+        <div class="private-info">
+          <h2>Private Pool</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p> 
+            <table class="table">
+                <thead>
+                  <tr>
+                  <th colspan="2">Operating Hours</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><b>Day Time</b></td>
+                    <td><b>Night Time</b></td>
+                  </tr>
+                  <tr>
+                    <td>8:00am - 5:00pm</td>
+                    <td>7:00pm - 5:00am</td>
+                  </tr>
+                  <tr>
+                    <td><b><span>&#8369;12,000 (50pax)</span></b></td>
+                    <td><b><span>&#8369;14,000 (50pax)</span></b></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a class="btn btn-primary" data-toggle="collapse" href="checkexclusive.php" role="button">Reserve Now! </a>
+            </div>
+</div>
+</div>
+</div>
+<div class="item-private">
+            <div class="items-rowss">
+            <div class="private-info">
+             <h2>Public Pool</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p> 
+
+                    <table class="table">
+                <thead>
+                  <tr>
+                  <th colspan="2">Operating Hours</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><b>Day Time</b></td>
+                    <td><b>Night Time</b></td>
+                  </tr>
+                  <tr>
+                  <td>8:00am - 5:00pm</td>
+                  <td>7:00pm - 5:00am</td>
+                  </tr>
+                  <tr>
+                   <td><b></span>&#8369; 8,000 (50pax) </span></b></td>
+                    <td><b><span>&#8369; 10,000 (50pax) </b></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a class="btn btn-primary" data-toggle="collapse" href="checkexclusive.php" role="button">Reserve Now! </a>
+            </div>
+            <div class="item-rows">
+            <img src="image/bakground/privatepool.jpg" alt="" srcset=""></div>
+          <div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hall">
+<h1>Function Hall</h1>
+        <div class="hall-img-pics">
+        
+        <div class="type-hall-infos">
+        <div class="type-hall">
+        <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="image/Hall/hall.jpg"></div>
+        <div class="swiper-slide"><img src="image/Hall/hall3.jpg"></div>
+        <div class="swiper-slide"><img src="image/Hall/hall.jpg"></div>
+        <div class="swiper-slide"><img src="image/Hall/hall3.jpg"></div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    </div>
+          <div class="hall-infos-item">
+            <h1>Cheap rates! Classy Environment!</h1>
+                <p>D'Rocks Function Hall is available for Weddings, Debut, Birthday, Baptismal and any occasion you wanted to have. 
+                Fully air-conditioned venue that gives you a very comfortable ambiance...
+                Cheap rates!!! Classy Environment!!!
+                Make us part of the most important events of your lives....
+                Just hit us a message!</p> 
+                <li><a href=""><i class="fa-solid fa-phone"></i>0905-271-3238</a></li>
+                <li><a href=""><i class="fa-solid fa-envelope"></i>drockresort2022@gmail.com</a></li>
+</div>
+</div>
+</div>
+
+        <div class="gallery">
+        <a href="image/bakground/hall.jpg" data-lightbox="mygallery"><img class="img-fluid" src="image/bakground/hall.jpg" alt=""></a>
+        <a href="image/bakground/hal9.jpg" data-lightbox="mygallery"><img class="img-fluid" src="image/bakground/hal9.jpg" alt=""></a>
+        <a href="image/bakground/hall6.jpg" data-lightbox="mygallery"><img class="img-fluid" src="image/bakground/hall6.jpg" alt=""></a>
+        <a href="image/bakground/hall.jpg" data-lightbox="mygallery"><img class="img-fluid" src="image/bakground/hall.jpg" alt=""></a>
+        <a href="image/bakground/hal9.jpg" data-lightbox="mygallery"><img class="img-fluid" src="image/bakground/hal9.jpg" alt=""></a>
+        <a href="image/Hall/hall.jpg" data-lightbox="mygallery"><img class="img-fluid" src="image/Hall/hall.jpg" alt=""></a>
+        <a href="image/bakground/hall2.jpg" data-lightbox="mygallery"><img class="img-fluid" src="image/bakground/hall2.jpg" alt=""></a>
+        <a href="image/bakground/hall1.jpg" data-lightbox="mygallery"><img class="img-fluid" src="image/bakground/hall1.jpg" alt=""></a>
+</div>
+</div>
+
+
+<section class="footer">
+  <div class="icons">
+      <li><a href="https://www.facebook.com/DROCKResort"><i class="fa-brands fa-instagram"></i></a></li>
+      <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+      <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+      <li><a href=""><i class="fa-brands fa-pinterest"></i></a></li>
+  </div>
+  <div class="contacts">
+    <h1>Contacts us on:</h1>
+   <li><a href=""><i class="fa-solid fa-phone"></i>0905-271-3238</a></li>
+   <li><a href=""><i class="fa-solid fa-envelope"></i>drockresort2022@gmail.com</a></li>
+   <li><a href=""><i class="fa-solid fa-location-pin"></i>Sitio Tanag Brgy. San Isidro, Rodriguez Rizal</i></a></li>
+</div>
+<div class="legal">
+          <li><a href="Terms-and-condition.php">Copyright <i class="fa-solid fa-copyright"></i>2022 D'rock Resort Managemnt.</a></li>
+          <li><a href="Terms-and-condition.php">Privacy policy. Terms & condition.</a></li>
+       </div>
+
+    </section>
+
+
+
+
+
+</body>
+
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <script>
+          function _0x3ebd(_0x4e0b7a,_0x3a447e){const _0x40c805=_0x40c8();return _0x3ebd=function(_0x3ebd94,_0x546520){_0x3ebd94=_0x3ebd94-0x1a1;let _0x41df77=_0x40c805[_0x3ebd94];return _0x41df77;},_0x3ebd(_0x4e0b7a,_0x3a447e);}const _0x28acdf=_0x3ebd;function _0x40c8(){const _0x32ae66=['528568jfKqvU','1718684hrDvWh','.swiper-button-next','2406546xEBfdu','10FPYmFa','6309612dqTDao','.swiper','6465354CInScx','8YYghAy','1811250FsHFRt','.swiper-pagination','.swiper-button-prev','5077746ORFqNR'];_0x40c8=function(){return _0x32ae66;};return _0x40c8();}(function(_0x3ed0d3,_0x5e2979){const _0x67025e=_0x3ebd,_0x56dcd4=_0x3ed0d3();while(!![]){try{const _0x5af5e2=-parseInt(_0x67025e(0x1aa))/0x1+parseInt(_0x67025e(0x1ac))/0x2+parseInt(_0x67025e(0x1a8))/0x3+-parseInt(_0x67025e(0x1a9))/0x4*(-parseInt(_0x67025e(0x1ad))/0x5)+-parseInt(_0x67025e(0x1a5))/0x6+-parseInt(_0x67025e(0x1a3))/0x7+parseInt(_0x67025e(0x1a4))/0x8*(parseInt(_0x67025e(0x1a1))/0x9);if(_0x5af5e2===_0x5e2979)break;else _0x56dcd4['push'](_0x56dcd4['shift']());}catch(_0x5963bb){_0x56dcd4['push'](_0x56dcd4['shift']());}}}(_0x40c8,0xdfe22));const swiper=new Swiper(_0x28acdf(0x1a2),{'autoplay':{'delay':0x1770,'disableOnInteraction':![]},'loop':!![],'pagination':{'el':_0x28acdf(0x1a6),'clickable':!![]},'navigation':{'nextEl':_0x28acdf(0x1ab),'prevEl':_0x28acdf(0x1a7)}});
+          </script>
+
+</script>
+<script type="text/javascript" src="jquery-3.6.0.js"></script>
+<script type="text/javascript" src="jquery-ui.js"></script>
+
+<script>
+    $("#datepicker1").datepicker();
+    $("#datepicker2").datepicker();
+    </script>
+      
+
+</script>
+<script>
+  //  });
+  function _0x32a9(_0x46fc8c,_0xc1f636){var _0xd7fa86=_0xd7fa();return _0x32a9=function(_0x32a910,_0x3f9402){_0x32a910=_0x32a910-0x1ab;var _0x501912=_0xd7fa86[_0x32a910];return _0x501912;},_0x32a9(_0x46fc8c,_0xc1f636);}var _0x124f63=_0x32a9;function _0xd7fa(){var _0x1bf7af=['data-filter','2273110oWKlIr','822560DaAcUg','.popup-btn','click','active','2689908LwGOvC','removeClass','480682iYCVqO','ready','3jnfkbU','568240EQsLNQ','image','1368236SOJJdQ','1047585jldWtw','.portfolio-menu\x20ul\x20li','magnificPopup','attr'];_0xd7fa=function(){return _0x1bf7af;};return _0xd7fa();}(function(_0x229d35,_0x42b57d){var _0xd9ae42=_0x32a9,_0x54a2fd=_0x229d35();while(!![]){try{var _0x4e94b9=parseInt(_0xd9ae42(0x1b6))/0x1+parseInt(_0xd9ae42(0x1b9))/0x2+-parseInt(_0xd9ae42(0x1b8))/0x3*(-parseInt(_0xd9ae42(0x1bb))/0x4)+-parseInt(_0xd9ae42(0x1af))/0x5+-parseInt(_0xd9ae42(0x1b4))/0x6+parseInt(_0xd9ae42(0x1bc))/0x7+-parseInt(_0xd9ae42(0x1b0))/0x8;if(_0x4e94b9===_0x42b57d)break;else _0x54a2fd['push'](_0x54a2fd['shift']());}catch(_0x31193c){_0x54a2fd['push'](_0x54a2fd['shift']());}}}(_0xd7fa,0x3d384),$(_0x124f63(0x1ab))[_0x124f63(0x1b2)](function(){var _0x397269=_0x124f63;$('.portfolio-menu\x20ul\x20li')[_0x397269(0x1b5)](_0x397269(0x1b3)),$(this)['addClass'](_0x397269(0x1b3));var _0x30707d=$(this)[_0x397269(0x1ad)](_0x397269(0x1ae));return $('.portfolio-item')['isotope']({'filter':_0x30707d}),![];}),$(document)[_0x124f63(0x1b7)](function(){var _0x41030c=_0x124f63,_0x5e6f7f=$(_0x41030c(0x1b1));_0x5e6f7f[_0x41030c(0x1ac)]({'type':_0x41030c(0x1ba),'gallery':{'enabled':!![]}});}));
+</script>
+</html>

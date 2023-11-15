@@ -1,0 +1,478 @@
+<?php
+include "connect.php";
+
+if(isset($_POST['submit'])){
+    $GUEST_NAME = $_POST['GUEST_NAME'];
+    $CONTACT_NO = $_POST['CONTACT_NO'];
+    $ADULT = $_POST['ADULT'];
+    $KID = $_POST['KID'];
+    $PWD = $_POST['PWD'];
+    $TYPE = $_POST['TYPE'];
+    $COTTAGE_TYPE = $_POST['COTTAGE_TYPE'];
+    $CQUANTITY = $_POST['CQUANTITY'];
+    $ROOM_TYPE = $_POST['ROOM_TYPE'];
+    $RQUANTITY = $_POST['RQUANTITY'];
+    $EXCLUSIVE_TYPE = $_POST['EXCLUSIVE_TYPE'];
+    $DATE_RESERVED = $_POST['DATE_RESERVED'];
+    $VALID_ID = $_POST['VALID_ID'];
+
+
+
+
+$sql = "INSERT INTO `new_reservation`(`ID`, `GUEST_NAME`, `CONTACT_NO`, `ADULT`, `KID`, `PWD`, `TYPE`,`COTTAGE_TYPE`, `CQUANTITY`, `ROOM_TYPE`, `RQUANTITY`, `EXCLUSIVE_TYPE`, `DATE_RESERVED`, `VALID-ID`) VALUES(NULL,'$GUEST_NAME','$CONTACT_NO','$ADULT','$KID','$PWD',' $TYPE','$COTTAGE_TYPE','$CQUANTITY','$ROOM_TYPE','$RQUANTITY','$EXCLUSIVE_TYPE','$DATE_RESERVED', '$VALID_ID')";
+
+    $result = mysqli_query($conn, $sql);
+
+    if($result) {
+      header("Location: sample.php?msg=You have successfully book a reservation. Please save the date and prepare the payment thank you.");
+      exit();
+    }
+    else{
+        echo "Failed" . mysqli_error($conn);
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D'rock Resort</title>
+ <link rel="icon" href="image/favicon.ico" />
+    <link rel="stylesheet" href="./reserve_hidden.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Cormorant+Garamond&family=Roboto+Mono&family=Dancing+Script&family=Rubik&family=Lora&family=Poppins:wght@100&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+</head>
+<body>
+    <section class="Bars">
+    <div class="menu-bar">
+        <div class="logo">
+          <img src="image/drock.png" alt="" width="100px" height="50px"></div>
+          <ul>
+            <li><b><a href="index.php">HOME</a></b></li>
+            <li><b><a href="contact-us.php">CONTACT</a></b></li>
+            <li><b><a href="about.php">ABOUT</a></b></li>
+            <li><b><a href="FAQ.php">FAQ</a></b></li>
+          </ul>
+        </div>
+      <div class="about-section">
+        <div class="container">
+        <h1>Book for Reservation Now!</h1>
+</div>
+</div>
+<div class="booking-reserve-info"> 
+    <div class="reserve">
+    <?php
+        if(isset($_GET['msg'])){
+            $msg = $_GET['msg'];
+            echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+           '.$msg.'
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>';
+        }
+        ?>
+    <h2><b>Please provide accurate information.</b></h2> 
+      <p>D'rock Pool Form</p> 
+       <form action="" method="POST">
+
+
+       <div class="form-row">
+       <div class="row">
+        <div class="col">
+      <label for="">Fullname<span>*</span>:
+      <input type="text" class="form-control" name="GUEST_NAME" id ="fname" required></label>
+    </div>
+
+    <div class="col">
+    <label for="cpnum">Phone No<span>*</span>:
+        <input type="tel" class=" form-control" name="CONTACT_NO" pattern="[0-9]{11}" required> </label>
+        </div>
+
+        <div class="col">
+        <label for="cpnum">Adult/s<span>*</span>: 
+        <input type="number" class="input form-control" name="ADULT" placeholder="10" id="adult" min="5" required max="10" required /></label>
+        </div>
+        </div>
+
+        <div class="row">
+         <div class="col">
+        <label for="cpnum">Kid/s<span>*</span>: 
+        <input type="number" class="input form-control" name="KID" id="kid" placeholder="10" min="5" max="10" /> </label><br>
+        </div>
+      
+         <div class="col">
+        <label for="cpnum">PWD/ Person with disability: <br>
+        <input type="number" class="input form-control" name="PWD" id="pwdss"></label>  
+        </div>
+
+        <div class="col">
+        <label for="cpnum"> Total: <br>
+        <input type="number" class="form-control" name="total" id="pwd"></label>  
+  
+         	<script src="jquery-3.5.0.min.js"></script>
+	<script>
+	
+$(document).ready(function(){
+  // Get value on keyup function
+  $("#kid, #adult,#pwdss,#ast").keyup(function(){
+    var x = Number($("#kid").val());
+    var y = Number($("#adult").val());
+     var z = Number($("#pwdss").val());
+     var b = Number($("#ast").val());
+    var total = 0;
+    
+    if ($("#rt").val() === "Day Time") {
+     
+     var tkid = x * 50;
+     var tadult = y * 100;
+     var tpwd = z * 30;
+     
+     
+   if ($("#cotss").val() === "NIPA ROCK 1 8-10 Persons") {
+       
+              var tb = b * 400;
+              
+               total = tkid + tadult + tpwd + tb   
+     }
+     else if ($("#cotss").val() === "NIPA ROCK 2 8-10 Persons") {
+         
+          var tb = b * 400;
+              
+               total = tkid + tadult + tpwd + tb
+     }
+     
+     
+     else if ($("#cotss").val() === "NIPA ROCK 3 8-10 Persons") {
+         
+          var tb = b * 400;
+              
+               total = tkid + tadult + tpwd + tb
+     }
+     
+     else if ($("#cotss").val() === "NIPA ROCK 4 15-20 Persons") {
+          var tb = b * 400;
+              
+               total = tkid + tadult + tpwd + tb
+         
+     }
+     
+     
+     else if ($("#cotss").val() === "PAVILLION 1 10-15 Persons") {
+         
+          var tb = b * 500;
+              
+               total = tkid + tadult + tpwd + tb
+     }
+     
+     
+     else if ($("#cotss").val() === "PAVILLION 2 10-15 Persons") {
+          var tb = b * 500;
+              
+               total = tkid + tadult + tpwd + tb
+         
+     }
+     
+     else if ($("#cotss").val() === "PAVILLION 3 10-15 Persons") {
+          var tb = b * 500;
+              
+               total = tkid + tadult + tpwd + tb
+         
+     }
+     
+     else if ($("#cotss").val() === "PAVILLION 4 10-15 Persons") {
+          var tb = b * 500;
+              
+               total = tkid + tadult + tpwd + tb
+         
+     }
+     
+     
+     else if ($("#cotss").val() === "VIEW DECK 1 10-15 Persons") {
+          var tb = b * 400;
+              
+               total = tkid + tadult + tpwd + tb
+         
+     }
+     
+     else if ($("#cotss").val() === "VIEW DECK 2 10-15 Persons") {
+         
+         var tb = b * 400;
+              
+               total = tkid + tadult + tpwd + tb
+     }
+     
+     else if ($("#cotss").val() === "VIEW DECK 3 10-15 Persons") {
+         var tb = b * 400;
+              
+               total = tkid + tadult + tpwd + tb
+         
+     }
+     
+     else if ($("#cotss").val() === "VIEW DECK 4 10-15 Persons") {
+         var tb = b * 400;
+              
+               total = tkid + tadult + tpwd + tb
+         
+     }
+     
+   
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    } else if ($("#rt").val() === "Night Time") {
+     
+      var tkid = x * 100;
+     var tadult = y * 150;
+     var tpwd = z * 60;
+     
+     
+         if ($("#cotss").val() === "NIPA ROCK 1 8-10 Persons") {
+       
+              var tb = b * 400;
+              
+               total = tkid + tadult + tpwd + tb
+         
+     }
+     
+     
+     else if ($("#cotss").val() === "NIPA ROCK 2 8-10 Persons") {
+         
+          var tb = b * 400;
+              
+               total = tkid + tadult + tpwd + tb
+     }
+     
+     
+     else if ($("#cotss").val() === "NIPA ROCK 3 8-10 Persons") {
+         
+          var tb = b * 400;
+              
+               total = tkid + tadult + tpwd + tb
+     }
+     
+     else if ($("#cotss").val() === "NIPA ROCK 4 15-20 Persons") {
+          var tb = b * 400;
+              
+               total = tkid + tadult + tpwd + tb
+         
+     }
+     
+     
+     else if ($("#cotss").val() === "PAVILLION 1 10-15 Persons") {
+         
+          var tb = b * 500;
+              
+               total = tkid + tadult + tpwd + tb
+     }
+     
+     
+     else if ($("#cotss").val() === "PAVILLION 2 10-15 Persons") {
+          var tb = b * 500;
+              
+               total = tkid + tadult + tpwd + tb
+         
+     }
+     
+     else if ($("#cotss").val() === "PAVILLION 3 10-15 Persons") {
+          var tb = b * 500;
+              
+               total = tkid + tadult + tpwd + tb
+         
+     }
+     
+     else if ($("#cotss").val() === "PAVILLION 4 10-15 Persons") {
+          var tb = b * 500;
+              
+               total = tkid + tadult + tpwd + tb
+         
+     }
+     
+     
+     else if ($("#cotss").val() === "VIEW DECK 1 10-15 Persons") {
+          var tb = b * 400;
+              
+               total = tkid + tadult + tpwd + tb
+         
+     }
+     
+     else if ($("#cotss").val() === "VIEW DECK 2 10-15 Persons") {
+         
+         var tb = b * 400;
+              
+               total = tkid + tadult + tpwd + tb
+     }
+     
+     else if ($("#cotss").val() === "VIEW DECK 3 10-15 Persons") {
+         var tb = b * 400;
+              
+               total = tkid + tadult + tpwd + tb
+         
+     }
+     
+     else if ($("#cotss").val() === "VIEW DECK 4 10-15 Persons") {
+         var tb = b * 400;
+              
+               total = tkid + tadult + tpwd + tb
+         
+     }
+    }
+    
+    $('#pwd').val(total);
+  });
+  
+  // Add event listener to the select element with id "rt"
+  $("#rt,#cotss").on("change", function() {
+    // Call the keyup event to update the calculation when the selection is changed
+    $("#kid, #adult,#pwdss,#ast").trigger("keyup");
+  });
+});
+</script> 
+        </div>
+
+         <div class="col">
+        <label for="re" class="re">Reservation date<span>*</span>: 
+        <input type="date" class="form-control" name="DATE_RESERVED" id="checkin-date" min="12-25-2022" required></label>
+        </div>
+        </div>
+
+        <div class="cottage-reserve">
+          <h2>D'rock Cottage</h2><br> 
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label>Day Time Schedule<span>*</span>: <br> 
+            <select name="TYPE"  class="form-control" id="rt" required onchange="myFunction(this.value);" >
+            <option value="" selected hidden>Select</option>
+            <option data-value="green">Day Time</option>
+   <option data-value="red">Night Time</option>
+            </select>
+            
+            </label>
+          </div>
+
+            <div class="col">
+            <label>Cottage Type: <br> 
+              <select name="COTTAGE_TYPE" class="form-control" id="cotss" required onchange="myFunction(this.value);">
+                <option value="" selected hidden>Select</option>
+                <option data-value="NIPA ROCK 1">NIPA ROCK 1 8-10 Persons </option>
+                <option data-value="NIPA ROCK 2">NIPA ROCK 2 8-10 Persons </option>
+                <option data-value="NIPA ROCK 3">NIPA ROCK 3 8-10 Persons </option>
+                <option data-value="NIPA ROCK 4">NIPA ROCK 4 15-20 Persons</option>
+                <option data-value="PAVILLION 1">PAVILLION 1 10-15 Persons</option>
+                <option data-value="PAVILLION 2">PAVILLION 2 10-15 Persons</option>
+                <option data-value="PAVILLION 3">PAVILLION 3 10-15 Persons</option>
+                <option data-value="PAVILLION 4">PAVILLION 4 10-15 Persons</option>
+                <option data-value="VIEW DECK 1">VIEW DECK 1 10-15 Persons</option>
+                <option data-value="VIEW DECK 2">VIEW DECK 2 10-15 Persons</option>
+                <option data-value="VIEW DECK 3">VIEW DECK 3 10-15 Persons</option>
+                <option data-value="VIEW DECK 4">VIEW DECK 4 10-15 Persons</option>
+              </select>
+              </label>
+              </div>
+
+          <div class="col">
+              <label for="cpnum">Cottage Quantity: <br>
+            <input type="number" class="form-control"   name="CQUANTITY" id="ast" placeholder="1" min="1" max="4" required /></label>
+            </div>
+            </div>
+       <div class="payment">
+        <p>Please attach 1 valid id</p>
+        <input type="file" name="VALID_ID" class="form-control" accept="image/*"><br><br>
+        <div class="payment">
+      <h2>Please put the down payment first.</h2>
+      <p>Gcash Number: 09127166542</p>
+    </div>
+        <button type="submit"  id="mySubmit" class="btn btn-success" name="submit" >Submit</button>
+ 
+    
+        </table>
+            </form>
+    </div>
+  </div>
+    </div>
+    </div>
+</div>
+</div>
+<section class="footer">
+  <div class="icons">
+      <li><a href="https://www.facebook.com/DROCKResort"><i class="fa-brands fa-instagram"></i></a></li>
+      <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+      <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+      <li><a href=""><i class="fa-brands fa-pinterest"></i></a></li>
+  </div>
+  <div class="contacts">
+    <h1>Contacts us on:</h1>
+   <li><a href=""><i class="fa-solid fa-phone"></i>0905-271-3238</a></li>
+   <li><a href=""><i class="fa-solid fa-envelope"></i>drockresort2022@gmail.com</a></li>
+   <li><a href=""><i class="fa-solid fa-location-pin"></i>Sitio Tanag Brgy. San Isidro, Rodriguez Rizal</i></a></li>
+</div>
+<div class="legal">
+          <li><a href="">Copyright <i class="fa-solid fa-copyright"></i>2022 D'rock Resort Managemnt.</a></li>
+          <li><a href="">Privacy policy. Terms & condition.</a></li>
+       </div>
+
+    </section>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+
+</body>
+<script>
+  //disabled yesterdays date
+var _0xee1973=_0x7c02;function _0x7c02(_0x1a9fc3,_0x3e54ca){var _0xb797be=_0xb797();return _0x7c02=function(_0x7c0238,_0x11c03e){_0x7c0238=_0x7c0238-0x1da;var _0x3b0e26=_0xb797be[_0x7c0238];return _0x3b0e26;},_0x7c02(_0x1a9fc3,_0x3e54ca);}(function(_0x3b1d78,_0x874833){var _0x2fc39f=_0x7c02,_0x160c39=_0x3b1d78();while(!![]){try{var _0x369e6c=parseInt(_0x2fc39f(0x1e5))/0x1*(parseInt(_0x2fc39f(0x1eb))/0x2)+-parseInt(_0x2fc39f(0x1e1))/0x3+parseInt(_0x2fc39f(0x1de))/0x4+-parseInt(_0x2fc39f(0x1e9))/0x5*(-parseInt(_0x2fc39f(0x1e7))/0x6)+parseInt(_0x2fc39f(0x1e3))/0x7+parseInt(_0x2fc39f(0x1ea))/0x8*(-parseInt(_0x2fc39f(0x1df))/0x9)+parseInt(_0x2fc39f(0x1e4))/0xa*(parseInt(_0x2fc39f(0x1db))/0xb);if(_0x369e6c===_0x874833)break;else _0x160c39['push'](_0x160c39['shift']());}catch(_0x45010d){_0x160c39['push'](_0x160c39['shift']());}}}(_0xb797,0x408e6));var currentDateTime=new Date(),year=currentDateTime['getFullYear'](),month=currentDateTime[_0xee1973(0x1e2)]()+0x1,date=currentDateTime[_0xee1973(0x1e8)]()+0x1;date<0xa&&(date='0'+date);function _0xb797(){var _0x2c646b=['7080vmdiPd','15781Xdevyv','setAttribute','6qptHqD','getDate','2135905VODLkA','40CJoyPI','14fQEUTM','#checkout-date','1683xtUZmk','onchange','querySelector','1034308auyaLW','843462hASOUZ','min','1475781jlPTEm','getMonth','2242730evcqdu'];_0xb797=function(){return _0x2c646b;};return _0xb797();}month<0xa&&(month='0'+month);var dateTomorrow=year+'-'+month+'-'+date,checkinElem=document[_0xee1973(0x1dd)]('#checkin-date'),checkoutElem=document[_0xee1973(0x1dd)](_0xee1973(0x1da));checkinElem[_0xee1973(0x1e6)](_0xee1973(0x1e0),dateTomorrow),checkinElem[_0xee1973(0x1dc)]=function(){var _0xbbcec7=_0xee1973;checkoutElem[_0xbbcec7(0x1e6)](_0xbbcec7(0x1e0),this['value']);};
+  </script>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+     const _0x4682ca=_0x3519;(function(_0xe05d9,_0x3a2363){const _0x52b009=_0x3519,_0x2e50de=_0xe05d9();while(!![]){try{const _0x1d23ae=parseInt(_0x52b009(0xa9))/0x1+parseInt(_0x52b009(0xb1))/0x2+-parseInt(_0x52b009(0xab))/0x3+parseInt(_0x52b009(0xa8))/0x4*(parseInt(_0x52b009(0xb0))/0x5)+-parseInt(_0x52b009(0xac))/0x6*(-parseInt(_0x52b009(0xb2))/0x7)+-parseInt(_0x52b009(0xae))/0x8*(parseInt(_0x52b009(0xa7))/0x9)+-parseInt(_0x52b009(0xad))/0xa;if(_0x1d23ae===_0x3a2363)break;else _0x2e50de['push'](_0x2e50de['shift']());}catch(_0x3ed49d){_0x2e50de['push'](_0x2e50de['shift']());}}}(_0x2bff,0x87045));function _0x3519(_0x500662,_0x219772){const _0x2bff68=_0x2bff();return _0x3519=function(_0x351980,_0x5b10ff){_0x351980=_0x351980-0xa6;let _0x5db0c2=_0x2bff68[_0x351980];return _0x5db0c2;},_0x3519(_0x500662,_0x219772);}function _0x2bff(){const _0x57b8f0=['30887HJiSAB','.swiper-button-next','2306094WJmTVR','28482SJaUSp','3353550OROLfH','112DfWqZO','.swiper','445815FrLnIl','2197798AwczqZ','805tCMWGr','.swiper-button-prev','69282eFWyCp','4AvVfnb'];_0x2bff=function(){return _0x57b8f0;};return _0x2bff();}const swiper=new Swiper(_0x4682ca(0xaf),{'autoplay':{'delay':0x1770,'disableOnInteraction':![]},'loop':!![],'pagination':{'el':'.swiper-pagination','clickable':!![]},'navigation':{'nextEl':_0x4682ca(0xaa),'prevEl':_0x4682ca(0xa6)}});
+      </script>
+
+</script>
+<script type="text/javascript" src="jquery-3.6.0.js"></script>
+<script type="text/javascript" src="jquery-ui.js"></script>
+
+<script>
+    $("#datepicker1").datepicker();
+    $("#datepicker2").datepicker();
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</script>  
+<script type="text/javascript" src="jquery-3.6.0.js"></script>
+<script type="text/javascript" src="jquery-ui.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+ var _0x3e5d97=_0x117c;(function(_0x21327c,_0x2c4a13){var _0xda8ba=_0x117c,_0x115500=_0x21327c();while(!![]){try{var _0x42e662=-parseInt(_0xda8ba(0xd5))/0x1*(-parseInt(_0xda8ba(0xde))/0x2)+-parseInt(_0xda8ba(0xd7))/0x3+-parseInt(_0xda8ba(0xe3))/0x4+-parseInt(_0xda8ba(0xe1))/0x5*(-parseInt(_0xda8ba(0xe0))/0x6)+-parseInt(_0xda8ba(0xd4))/0x7*(-parseInt(_0xda8ba(0xd6))/0x8)+-parseInt(_0xda8ba(0xdf))/0x9*(-parseInt(_0xda8ba(0xd8))/0xa)+parseInt(_0xda8ba(0xdd))/0xb*(-parseInt(_0xda8ba(0xdb))/0xc);if(_0x42e662===_0x2c4a13)break;else _0x115500['push'](_0x115500['shift']());}catch(_0x36698e){_0x115500['push'](_0x115500['shift']());}}}(_0x29d0,0x8560f),$(document)[_0x3e5d97(0xd9)](function(){var _0x4b5e17=_0x3e5d97;$(_0x4b5e17(0xda))['keyup'](function(){var _0x2d54df=_0x4b5e17,_0x3941fc=0x0,_0x28df8f=Number($('#a')[_0x2d54df(0xdc)]()),_0x5abe67=Number($('#k')['val']()),_0x294478=Number($('#p')[_0x2d54df(0xdc)]()),_0x3941fc=_0x28df8f+_0x5abe67+_0x294478;$(_0x2d54df(0xe2))['val'](_0x3941fc);});}));function _0x117c(_0x8ba869,_0x2e46bd){var _0x29d059=_0x29d0();return _0x117c=function(_0x117ca3,_0x30e291){_0x117ca3=_0x117ca3-0xd4;var _0x3b233c=_0x29d059[_0x117ca3];return _0x3b233c;},_0x117c(_0x8ba869,_0x2e46bd);}function _0x29d0(){var _0x396a9d=['6818136TYFUFj','val','11ZuccLL','10264lZRtVd','5546367AXGuyO','6FOqMhG','1849915kAhIgN','#tot\x20','1211788mEdcEx','378007rczaix','190bTQKnC','64HDQFOv','2927670WWvotl','10QytHVi','ready','#a,#k,\x20#p'];_0x29d0=function(){return _0x396a9d;};return _0x29d0();}
+  </script>
+</html>

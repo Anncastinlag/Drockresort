@@ -1,0 +1,553 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100&family=Cormorant+Garamond:wght@300&family=Crimson+Text&family=Dancing+Script&family=Lora&family=Montserrat:wght@100&family=Noto+Sans:wght@200&family=Poppins:wght@100&family=Quicksand:wght@300&family=Raleway:wght@100;200;300&family=Roboto:wght@100&display=swap');
+* {
+padding: 0;
+margin: 0;
+}
+.about-section { 
+background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(image/bakground/pool4.jpg);
+background-size: cover;
+height: 90vh;
+background-position: center;
+}
+.logo {
+float: left;
+cursor: pointer;
+position: absolute;
+padding-top: 15px;
+padding-left: 25px;
+}
+.menu-bar {
+overflow: hidden;
+background-color: #fff;
+position: fixed;
+text-align: right;
+width: 100%;
+height: 10%;
+box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+.menu-bar ul {
+display: inline-flex;
+margin-right: 25px;
+text-align: center;
+}
+.menu-bar ul li {
+list-style-type: none;
+padding: 25px;
+text-align: center;
+margin-bottom:25%;
+}
+
+.menu-bar ul li a {
+position: relative;
+text-decoration: none;
+display: inline-block;
+color: #000;
+padding: 4px 5px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 16px;
+}
+.menu-bar a:after{
+content: '';
+position: absolute;
+background: #f1c40f;
+height: 3px;
+width: 0;
+left: 0;
+bottom: -1px;
+transition: 0.3s;
+}
+.menu-bar a:hover:after{
+width: 105%;
+}
+i {
+margin-right: 8px;
+}
+.container h1{
+color: #f1c40f;
+font-family: 'Dancing Script', cursive;
+padding-top: 25%;
+font-size: 60px;
+text-align: center;
+margin-bottom: 25px;
+}
+.pool-cottage-room{
+padding-top: 35px;
+}
+.pool-cottage-room h1{
+text-align: center;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 35px;
+padding-bottom: 25px;
+}
+.item-rows-public{
+display: flex;
+padding: 25px;
+overflow: hidden;
+}
+.swiper {
+width: 140%;
+}
+.swiper-slide img{
+width: 100%;
+height: 370px;
+}
+.public-info{
+padding: 15px;
+margin-left: 25px;
+margin-right: 25px;
+}
+.public-info h2{
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 25px;
+}
+.public-info p{
+text-align: justify;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 16px;
+line-height: 1.8;
+text-indent: 50px;
+}
+.public-info li{
+list-style: none;
+margin-left: auto;
+border: 1px solid #333;
+}
+.public-info a{
+text-decoration: none;
+color: #000;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 15px;
+border: 1px solid #ddd;
+width: 100%;
+}
+.public-info a:hover{
+color: #ddd;
+background-color: #4158D0;
+
+}
+.drock-pool{
+text-align: center;
+font-family: 'Times New Roman', Times, serif;
+font-size: 16px;
+}
+.drock-img-resort{
+display: inline-block;
+width: 240px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+text-align: center;
+line-height: 1.8;
+padding-bottom: 5px;
+margin: 5% 2%;
+}
+.drock-img-resort p{
+padding-top: 8px;
+}
+.drock-img-resort a{
+border: 1px solid #000;
+padding: 3px 20px;
+text-decoration: none;
+color: #000;
+}
+.drock-img-resort a:hover{
+border: 1px solid #ddd;
+background-color: #4158D0;
+color: #fff;
+padding: 3px 20px;
+}
+th, td {
+margin: auto;
+text-align: left;
+color: #000;
+border: 1px solid #ddd;
+border-collapse: collapse;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 16px;
+}
+.private-public-pool{
+padding-top: 3%;
+padding-left: 15px;
+padding-right: 15px;
+}
+.private-public-pool h1{
+text-align: center;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 35px;
+padding-bottom: 25px;
+}
+.item-public{
+  padding-top: 25px;
+}
+.item-rows{
+display: flex;
+padding-left: 15px;
+}
+.item-rows img{
+  margin-top: 25px;
+  width: 590px;
+  height: 370px;
+}
+.items-rowss{
+display: flex;
+padding: 25px;
+}
+.private-info h2{
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 25px;
+}
+.private-info p{
+text-align: justify;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 15px;
+line-height: 1.8;
+padding-top: 25px;
+padding-bottom: 3%;
+}
+  .private-info{
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .private-info h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+  }
+  .private-info p{
+  text-align: justify;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 16px;
+  line-height: 1.8;
+  }
+  .private-info li{
+    list-style: none;
+  }
+  .private-info a{
+  text-decoration: none;
+  color: #000;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  width: 100%;
+  }
+  .private-info a:hover{
+    color: #fff;
+    background: #4158D0;
+  }
+  .hall{
+    margin: 25px;
+    padding: 25px;
+  }
+  .hall h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 4%;
+  }
+  .type-hall-infos{ 
+    display: flex;
+  }
+  .type-hall .swiper{
+    width: 600px;
+  }
+  .swiper-button-prev{
+    padding-left: 35px;
+  }
+  .swiper-button-next{
+    padding-right: 35px;
+  }
+.hall-infos-item{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.hall-infos-item h1{
+  font-size: 35px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.hall-infos-item p{
+  padding-left: 25px;
+  text-align: justify;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 16px;
+line-height: 1.8;
+}
+.hall-infos-item li{
+  padding-left: 25px;
+  list-style: none;
+}
+.hall-infos-item a{
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+.hall-infos-item a:hover{
+  color: #000;
+}
+.gallery{
+padding-top: 8%;
+margin-left: 25px;
+margin-right: 25px;
+}
+.gallery img{
+width: 230px;
+transition: 1s;
+margin: 5px;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.gallery img:hover{
+transform: scale(1.1);
+box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+#fromthetop{
+  border: 1px solid #ccc;
+  text-align: center;
+  background: #333;
+}
+    /* End */
+    .footer{
+    display: inline-block;
+    width: 100%;
+    margin-top: 45%;
+    background-color: #000;
+    }
+    .footer .icons{
+    text-align: center;
+    }
+    .icons{
+    border-bottom: 1px solid #fff;
+    background: #000;
+    }
+    .icons li{
+    display: inline-block;
+    align-items: center;
+    padding: 5px 0 5px 7px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 9px;
+    border: 1px solid #ddd;
+    border-radius: 20%;
+    }
+    .icons a{
+    color: #fff;
+    
+    }
+    .footer .contacts{
+    float: left;
+    }
+    .legal{
+    float: right;
+    list-style-type: none;
+    padding: 25px 36px 25px 0;
+    margin-right: 8%;
+    
+    }
+    .legal li{
+    padding-bottom: 15px;
+    }
+    .legal a{
+    font-family: 'Cormorant Garamond', serif;
+    text-decoration: none;
+    color: #fff;
+    justify-content: space-around;
+    list-style-type: none;
+    }
+    .contacts{
+    color: #000;
+    font-family: 'Cormorant Garamond', serif;
+    padding: 25px 0 25px 45px;
+    margin-left: 8%;
+    }
+    .contacts h1{
+    color: #fff;
+    padding-bottom: 20px;
+    font-size: 30px;
+    } .contacts li{
+    font-family: 'Cormorant Garamond', serif;
+    text-decoration: none;
+    color: #fff;
+    list-style-type: none;
+    padding-bottom: 15px;
+    }
+    .contacts a{
+    text-decoration: none;
+    color: #fff;;
+    }
+@media screen and (max-width: 900px){
+.Bars{
+width: 100%;
+}
+.about-section{
+height: 60vh;
+}
+.menu-bar{
+width:100%;
+height: 5%;
+}
+.menu-bar ul {
+padding-top: 5px;
+}
+.menu-bar ul li {
+padding: 5px;
+}
+.menu-bar ul li a{
+font-size: 10px;
+padding: 2px;
+}
+.logo img{
+width: 60px;
+height: 30px;
+padding-bottom: 10px;
+}
+.container h1{
+font-size: 30px;
+padding-top: 65%;
+color: #f1c40f;
+}
+.pool-cottage-room h1{
+font-size: 20px;
+}
+.item-rows-public{
+display: block;
+padding: 5px;
+}
+.swiper {
+width: 90%;
+height: 210px;
+}
+.swiper-slide img{
+  width: 100%;
+  height: 210px;
+}
+th{
+font-size: 12px;
+}
+.public-info{
+padding: 15px 0px;
+}
+.public-info p{
+font-size: 11px;
+text-indent: 20px;
+}
+.public-info a{
+font-size: 11px;
+padding: 5px 125px;
+}
+.drock-pool{
+font-size: 11px;
+}
+.drock-img-resort{
+  width: 100px;
+  height: 185px;
+}
+.drock-img-resort img{
+width: 100px;
+height: 90px;
+}
+.drock-img-resort a{
+padding: 1px 5px;
+}
+.private-public-pool{
+display: block;
+margin: 15px;
+padding-top: 10px;
+}
+.private-public-pool h1{
+font-size: 20px;
+padding-bottom: 0px;
+}
+
+.item-private{
+display: block;
+padding: 0px;
+}
+.item-private img{
+display: block;
+margin: auto;
+width: 340px;
+height: 210px;
+}
+.item-rows{
+display: block;
+padding: 0px;
+}
+.items-rowss{
+display: block;
+padding: 0px;
+}
+.private-info{
+padding-left: 15px;
+padding-right: 15px;
+}
+.private-info h2{
+font-size: 15px;
+}
+.private-info p{
+font-size: 10px;
+}
+.private-info table th, td, tr{
+font-size: 10px;
+}
+.private-info a{
+font-size: 11px;
+padding: 5px 125px;
+}
+.hall{
+margin: 15px;
+padding: 15px;
+}
+.hall h1{
+font-size: 20px;
+}
+.type-hall-infos{ 
+display: block;
+}
+.type-hall .swiper{
+width: 330px;;
+}
+.swiper-button-prev{
+padding-left: 15px;
+font-size: 5px;
+}
+.swiper-button-next{
+padding-right: 15px;
+}
+.hall-infos-item h1{
+padding-top: 25px;
+padding-bottom: 2px;
+font-size: 12px;
+}
+.hall-infos-item p{
+font-size: 10px;
+padding: 0px;
+margin: 0%;
+text-indent: 20px;
+}
+.hall-infos-item a{
+font-size: 10px;
+}
+.gallery img{
+width: 130px;
+}
+.footer{
+text-align: center;
+}
+.contact-section h1{
+font-size: 15px;
+padding-top: 0%;
+}
+.contact-section li{
+font-size: 15px;
+text-align: center;
+}
+.contacts h1{
+padding-bottom: 20px;
+font-size: 20px;
+}
+.contacts{
+text-align: center;
+padding-left: 0%;
+}
+.legal{
+text-align: center;
+margin: auto;
+}
+}

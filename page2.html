@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .field{
+            border: 1px solid #ccc;
+            padding: 6px 12px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 16px;
+        }
+       
+    </style>
+    <div class="container">
+        <h1>Reservation Details</h1>
+        <form action="">
+            <table>
+                <div class="field">
+                    <label for="">Firstname:
+                        <span id="result1"></span>
+                    </label>
+                </div>
+                <div class="field">
+                    <label for="">Lastname:
+                        <span id="result2"></span>
+                    </label>
+                </div>
+                <div class="field">
+                    <label for="">Tel Number:
+                        <span id="result3"></span>
+                    </label>
+                </div>
+                <!-- input another data -->
+                <div class="field">
+                    <label for="">Tel Number:
+                       <input type="text">
+                    </label>
+                </div>
+            </table>
+        </form>
+    </div>
+   
+  
+
+
+    <script>
+        document.getElementById("result1").innerHTML=localStorage.getItem("fname");
+        document.getElementById("result2").innerHTML=localStorage.getItem("last");
+        document.getElementById("result3").innerHTML=localStorage.getItem("phone");
+
+    </script>
+</body>
+
+</html>
